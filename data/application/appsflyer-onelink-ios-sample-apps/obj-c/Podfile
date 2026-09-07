@@ -1,0 +1,9 @@
+# platform :ios, '17.0'
+
+target 'obj-c' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Clean baseline — no SDKs. Automation will install AppsFlyer here.
+
+end

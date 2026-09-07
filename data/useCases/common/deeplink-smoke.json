@@ -1,0 +1,42 @@
+{
+  "app_path": "data/application/banana.app",
+  "platform": "common",
+  "prompt_goal": "Trigger generic deep link and validate destination handling.",
+  "rules_policy": {
+  "default_profiles": ["common"],
+  "allow_user_override": true,
+  "allowed_profiles": ["common", "strict", "ios", "android"]
+  },
+  "answer_policy": {
+    "ios_minimal": {
+      "use_att": true,
+      "use_cuid": false,
+      "use_scene_delegate": true,
+      "use_response_listener": true
+    },
+    "deeplink": {
+      "use_deep_linking": true,
+      "onelink_url": "https://example.onelink.me/abc1/smokeLink",
+      "url_identifier": "offers",
+      "uri_scheme": "myapp",
+      "use_custom_uri_scheme": true
+    },
+    "in_app_event": {
+      "inapp_event_method": "none",
+      "event_name": null,
+      "event_params": {}
+    },
+    "verify_sdk": {
+      "verify_logs_ready": true,
+      "app_launched": true
+    },
+    "android": null
+  },
+  "installation_answers": [],
+  "agent_messages": [
+    "Deep link dispatched",
+    "Destination screen validated"
+  ],
+  "installation_agent_summary": "Deep link smoke flow passed."
+}
+
